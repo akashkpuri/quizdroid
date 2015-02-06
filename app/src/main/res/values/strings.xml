@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">quizdroid</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_math_topic_overview">MathTopicOverview</string>
+    <string name="title_activity_physics_topic_overview">PhysicsTopicOverview</string>
+    <string name="title_activity_marvel_topic_overview">MarvelTopicOverview</string>
+    <string name="title_activity_math_question">MathQuestion</string>
+    <string name="title_activity_physics">PhysicsActivity</string>
+    <string name="title_activity_physics_question">PhysicsQuestion</string>
+    <string name="title_activity_marvel_question">MarvelQuestion</string>
+    <string name="title_activity_question_review">QuestionReview</string>
+    <string name="title_activity_question_topic">QuestionTopic</string>
+    <string name="title_activity_question_ask">QuestionAsk</string>
+    <string name="title_activity_topic_overview">TopicOverview</string>
+    <string name="title_activity_question_topic_overview">QuestionTopicOverview</string>
+
+</resources>
