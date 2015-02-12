@@ -16,5 +16,6 @@
     <string name="title_activity_question_ask">QuestionAsk</string>
     <string name="title_activity_topic_overview">TopicOverview</string>
     <string name="title_activity_question_topic_overview">QuestionTopicOverview</string>
+    <string name="title_activity_fragment_manager">FragmentManager</string>
 
 </resources>

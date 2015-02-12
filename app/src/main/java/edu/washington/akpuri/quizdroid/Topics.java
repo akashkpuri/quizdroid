@@ -18,26 +18,26 @@ public class Topics extends ActionBarActivity {
         Button math = (Button) findViewById(R.id.mathButton);
         Button physics = (Button) findViewById(R.id.physicsButton);
         Button marvel = (Button) findViewById(R.id.marvelButton);
-        final Intent overview = new Intent(Topics.this, QuestionTopicOverview.class);
+        final Intent frags = new Intent(Topics.this, FragmentManager.class);
         math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                overview.putExtra("subject", "Math");
-                Topics.this.startActivity(overview);
+                frags.putExtra("subject", "Math");
+                Topics.this.startActivity(frags);
             }
         });
         physics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                overview.putExtra("subject", "Physics");
-                Topics.this.startActivity(overview);
+                frags.putExtra("subject", "Physics");
+                Topics.this.startActivity(frags);
             }
         });
         marvel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                overview.putExtra("subject", "Marvel Super Heroes");
-                Topics.this.startActivity(overview);
+                frags.putExtra("subject", "Marvel Super Heroes");
+                Topics.this.startActivity(frags);
             }
         });
     }
