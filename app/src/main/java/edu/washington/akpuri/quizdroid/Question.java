@@ -3,21 +3,42 @@ package edu.washington.akpuri.quizdroid;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//My custom domain object representing a Quiz
 public class Question implements Serializable {
     public int answer;
     public String question;
-    public String[] choices = new String[4];
+    public ArrayList<String> choices;
 
-    public Question(String question, String first, String second, String third, String fourth, int answer) {
-        this.question = question;
-        choices[0] = first;
-        choices[1] = second;
-        choices[2] = third;
-        choices[3] = fourth;
+    public Question(){
+    }
+
+    public void setAnswer(int answer) {
         this.answer = answer;
     }
 
-    public String get(int index) {
-        return choices[index];
+    public void setChoices(ArrayList<String> choices) {
+        this.choices = choices;
     }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getChoice(int index) {
+        return choices.get(index);
+    }
+
+    public ArrayList<String> getChoices() {
+        return choices;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public String getStringAnswer() { return choices.get(answer);}
 }

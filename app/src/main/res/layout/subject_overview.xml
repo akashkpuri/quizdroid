@@ -12,27 +12,42 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <TextView
-            android:layout_width="184dp"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Math"
-            android:id="@+id/questionTopicSubject"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Math"
+                android:id="@+id/questionTopicSubject"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_launcher"
+                android:layout_gravity="right" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Subject overview in here"
             android:id="@+id/subjectOverview"
             android:textSize="10pt"
 
-            android:layout_weight="0.10"
-            android:layout_gravity="center_vertical"
+            android:layout_weight="0.01"
+            android:layout_gravity="center_vertical|top"
             android:gravity="center_vertical|center_horizontal" />
 
         <TextView
@@ -45,11 +60,12 @@
             android:layout_gravity="center_horizontal" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Begin"
             android:id="@+id/beginQuestion"
             android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
 </FrameLayout>

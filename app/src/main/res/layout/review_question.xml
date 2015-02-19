@@ -55,14 +55,15 @@
             android:layout_alignRight="@+id/reviewGuess"
             android:layout_alignEnd="@+id/reviewGuess" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="reviewNext"
-            android:id="@+id/reviewNext"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|bottom"
-            android:gravity="bottom" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="reviewNext"
+        android:id="@+id/reviewNext"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical|bottom"
+        android:gravity="center_vertical|center_horizontal" />
 </FrameLayout>

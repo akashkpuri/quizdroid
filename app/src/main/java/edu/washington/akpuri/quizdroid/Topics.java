@@ -3,10 +3,16 @@ package edu.washington.akpuri.quizdroid;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
 
 
 public class Topics extends ActionBarActivity {
@@ -15,30 +21,26 @@ public class Topics extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topics);
-        Button math = (Button) findViewById(R.id.mathButton);
-        Button physics = (Button) findViewById(R.id.physicsButton);
-        Button marvel = (Button) findViewById(R.id.marvelButton);
+        final QuizApp quiz = QuizApp.getInstance();
+        ArrayList<Topic> topics = quiz.getTopics();
+        ListView topicList = (ListView) findViewById(R.id.listView);
+        ListAdapter customAdapter = new TopicArrayAdapter(this, R.id.list_item, topics);
+        topicList.setAdapter(customAdapter);
         final Intent frags = new Intent(Topics.this, FragmentManager.class);
-        math.setOnClickListener(new View.OnClickListener() {
+
+        topicList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                frags.putExtra("subject", "Math");
-                Topics.this.startActivity(frags);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                quiz.setCurrentTopic(position);
+                if (view instanceof RelativeLayout) {
+                    Log.i("ListView", "Succesfully found the custom Layout");
+
+                    RelativeLayout topicItem = (RelativeLayout) view;
+                    Log.i("ListView", "Position = " + position);
+                    startActivity(frags);
+                }
             }
-        });
-        physics.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                frags.putExtra("subject", "Physics");
-                Topics.this.startActivity(frags);
-            }
-        });
-        marvel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                frags.putExtra("subject", "Marvel Super Heroes");
-                Topics.this.startActivity(frags);
-            }
+
         });
     }
     @Override

@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="What is 1 + 2?"
             android:id="@+id/actualQuestion"
-            android:textSize="12pt"
+            android:textSize="10pt"
             android:layout_below="@+id/questionStatus"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
@@ -99,14 +99,15 @@
                 android:onClick="qRadio"/>
         </RadioGroup>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:id="@+id/nextQuestion"
-            android:enabled="false"
-            android:gravity="center_horizontal|bottom"
-            android:layout_gravity="center_horizontal|bottom" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/nextQuestion"
+        android:enabled="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>
