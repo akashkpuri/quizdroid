@@ -32,6 +32,10 @@
             android:name=".QuestionTopicOverview"
             android:label="@string/title_activity_question_topic_overview" >
         </activity>
+        <activity
+            android:name=".FragmentManager"
+            android:label="@string/title_activity_fragment_manager" >
+        </activity>
     </application>
 
 </manifest>
