@@ -31,7 +31,7 @@ public class QuizApp extends Application implements TopicRepository{
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("QuizApp", "QuizApp was successfully created!");
+        //Log.d("QuizApp", "QuizApp was successfully created!");
 
         topics = new ArrayList<Topic>();
         //Set up the math topic with 3 questions

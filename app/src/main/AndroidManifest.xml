@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.washington.akpuri.quizdroid" >
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".QuizApp"
         android:allowBackup="true"
@@ -21,5 +23,11 @@
             android:name=".FragmentManager"
             android:label="@string/title_activity_fragment_manager" >
         </activity>
+        <activity
+            android:name=".Preferences"
+            android:label="@string/title_activity_preferences" >
+        </activity>
+        <receiver android:name=".DownloadManager"/>
     </application>
+
 </manifest>

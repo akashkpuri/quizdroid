@@ -40,8 +40,8 @@ public class TopicArrayAdapter extends ArrayAdapter<Topic> {
         ImageView icon = (ImageView) v.findViewById(R.id.icon);
         TextView titleText = (TextView) v.findViewById(R.id.titleTopic1);
         TextView shortO = (TextView) v.findViewById(R.id.shortO);
-        Log.i("TopicListView", "Position = " + position);
-        Log.i("TopicListView", "Title = " + topic.getTitle());
+        //Log.i("TopicListView", "Position = " + position);
+        //Log.i("TopicListView", "Title = " + topic.getTitle());
         titleText.setText(topic.getTitle());
         shortO.setText(topic.getShortOverview());
 
